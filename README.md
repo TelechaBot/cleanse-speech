@@ -4,9 +4,18 @@
 [![Downloads](https://pepy.tech/badge/cleanse_speech)](https://pepy.tech/project/cleanse_speech)
 [![Downloads](https://pepy.tech/badge/cleanse_speech/month)](https://pepy.tech/project/cleanse_speech)
 
-Python🐍 3.9+ support. 
+Python🐍 3.9+ support.
 
+A library for cleansing sensitive words in speech.
 
+> [!NOTE]
+> This library is designed with the intent to promote a harmonious online environment by identifying and
+> addressing offensive language. It is **not** intended to enforce strict censorship or infringe upon free speech. Our
+> goal is to foster respectful communication and ensure that all users feel safe and included in online communities. By
+> using this library, developers can help create spaces where open dialogue is encouraged while maintaining a level of
+> decency and mutual respect.
+
+## Installation
 
 ```shell
 pip install cleanse-speech
