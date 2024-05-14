@@ -1,8 +1,8 @@
 # cleanse-speech 🚀
 
-[![PyPI version](https://badge.fury.io/py/cleanse-speech.svg)](https://badge.fury.io/py/cleanse-speech)
-[![Downloads](https://pepy.tech/badge/cleanse-speech)](https://pepy.tech/project/cleanse-speech)
-[![Downloads](https://pepy.tech/badge/cleanse-speech/month)](https://pepy.tech/project/cleanse-speech)
+[![PyPI version](https://badge.fury.io/py/cleanse_speech.svg)](https://badge.fury.io/py/cleanse_speech)
+[![Downloads](https://pepy.tech/badge/cleanse_speech)](https://pepy.tech/project/cleanse_speech)
+[![Downloads](https://pepy.tech/badge/cleanse_speech/month)](https://pepy.tech/project/cleanse_speech)
 
 Python🐍 3.9+ support. 
 
