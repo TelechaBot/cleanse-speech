@@ -1,6 +1,6 @@
 import io
 
-from cleanse_speech import DLFA
+from cleanse_speech.dlfa import DLFA
 
 if __name__ == '__main__':
     dfa = DLFA(words_resource=[
