@@ -3,13 +3,19 @@ import pathlib
 import re
 from typing import Union, List, Dict, Any
 
+from zhconv import convert
+
 
 class DLFA:
-    def __init__(self, words_resource: List[Union[List[str], io.BytesIO, pathlib.Path]]) -> None:
+    def __init__(self,
+                 words_resource: List[Union[List[str], io.BytesIO, pathlib.Path]],
+                 zh_unification: bool = False,
+                 ) -> None:
         """
         Initialize a DFA to detect and censor sensitive words.
         :param words_resource:  A list of sensitive words or a BytesIO object that contains sensitive words.
         """
+        self.zh_unification = zh_unification
         self.ban_words_set = set()
         self.ban_words_list: List[str] = []
         self.ban_words_dict: Dict[str, Any] = {}
@@ -44,6 +50,15 @@ class DLFA:
                 if word_to_add not in self.ban_words_set:
                     self.ban_words_set.add(word_to_add)
                     self.ban_words_list.append(word_to_add)
+                if self.zh_unification:
+                    converted_tw = convert(word_to_add, 'zh-tw')
+                    if converted_tw not in self.ban_words_set:
+                        self.ban_words_set.add(converted_tw)
+                        self.ban_words_list.append(converted_tw)
+                    converted_hant = convert(word_to_add, 'zh-hant')
+                    if converted_hant not in self.ban_words_set:
+                        self.ban_words_set.add(converted_hant)
+                        self.ban_words_list.append(converted_hant)
         self.build_ban_words_dict(self.ban_words_list)
 
     def update_words(self, words_resource: Union[List[str], io.BytesIO]) -> None:
