@@ -14,6 +14,7 @@ class DLFA:
         """
         Initialize a DFA to detect and censor sensitive words.
         :param words_resource:  A list of sensitive words or a BytesIO object that contains sensitive words.
+        :param zh_unification: Whether to unify Chinese characters.
         """
         self.zh_unification = zh_unification
         self.ban_words_set = set()
