@@ -1,6 +1,6 @@
 [project]
 name = "cleanse-speech"
-version = "0.1.1"
+version = "0.1.2"
 description = "An intelligent Python library designed to detect and filter offensive language, ensuring respectful and constructive communication in any digital space."
 authors = [
     { name = "llmkira", email = "me@dianas.cyou" },

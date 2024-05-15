@@ -38,7 +38,7 @@ class DLFA:
             if word:
                 try:
                     decoded_word = base64.b64decode(word).decode('utf-8')
-                    word_to_add = decoded_word
+                    word_to_add = decoded_word.strip()
                 except (Exception, UnicodeDecodeError):
                     word_to_add = word
                 if word_to_add not in self.ban_words_set:
